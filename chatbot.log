@@ -74,3 +74,78 @@ Tool Call: {'tool_call_id': 'call_7T0jc70vdUxFOp8hdBg1lu8r', 'role': 'tool', 'na
                          'title': {'font': {'size': 18}, 'text': 'Number of Movies'}}}
 })}
 HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Your app is available at http://localhost:8002
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: show top movies based on imdb scores
+Assistant response: None
+Calling query_db with {'sql_query': 'SELECT title, imdb_score FROM movies ORDER BY imdb_score DESC LIMIT 5'}
+Tool Call: {'tool_call_id': 'call_wmDffeitXXM3cpkB0PYtR4gS', 'role': 'tool', 'name': 'query_db', 'content': '| title | imdb_score |\n| --- | --- |\n| The Shawshank Redemption | 9.3 |\n| The Godfather | 9.2 |\n| The Dark Knight | 9 |\n| The Godfather: Part II | 9 |\n| 12 Angry Men | 8.9 |\n'}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Calling plot_chart with {'plot_type': 'bar', 'x_values': ['The Shawshank Redemption', 'The Godfather', 'The Dark Knight', 'The Godfather: Part II', '12 Angry Men'], 'y_values': [9.3, 9.2, 9, 9, 8.9], 'plot_title': 'Top Movies Based on IMDB Scores', 'x_label': 'Movies', 'y_label': 'IMDB Scores'}
+Tool Call: {'tool_call_id': 'call_7unT5WZUu9ySKj4rY1DlO481', 'role': 'tool', 'name': 'plot_chart', 'content': Figure({
+    'data': [{'marker': {'color': '#24C8BF', 'line': {'width': 1}},
+              'type': 'bar',
+              'x': [The Shawshank Redemption, The Godfather, The Dark Knight, The
+                    Godfather: Part II, 12 Angry Men],
+              'y': [9.3, 9.2, 9, 9, 8.9]}],
+    'layout': {'margin': {'b': 60, 'l': 60, 'r': 60, 't': 80},
+               'paper_bgcolor': '#f8f8f8',
+               'plot_bgcolor': '#f8f8f8',
+               'template': '...',
+               'title': {'font': {'color': '#333', 'family': 'Arial', 'size': 20},
+                         'text': 'Top Movies Based on IMDB Scores Bar Chart'},
+               'xaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'Movies'}},
+               'yaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'IMDB Scores'}}}
+})}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: tell me about popular actors
+Assistant response: None
+Calling query_db with {'sql_query': 'SELECT name, COUNT(name) as appearance_count FROM actors GROUP BY name ORDER BY appearance_count DESC LIMIT 5'}
+Tool Call: {'tool_call_id': 'call_Axv1ZFZHPwzOk4nZ1eFXmCq9', 'role': 'tool', 'name': 'query_db', 'content': '| name | appearance_count |\n| --- | --- |\n| Paul Bateman | 5 |\n| Norman Gay | 4 |\n| Noriko Honma | 4 |\n| Kevin Spacey | 4 |\n| John Rhys-Davies | 4 |\n'}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: show me movie trends in last 5 years
+Assistant response: None
+Calling query_db with {'sql_query': "SELECT year, COUNT(title) as movie_count FROM movies WHERE year >= (strftime('%Y', 'now') - 5) GROUP BY year ORDER BY year"}
+Tool Call: {'tool_call_id': 'call_HoIevkGplv4Wo9RaRY4PpHAu', 'role': 'tool', 'name': 'query_db', 'content': '| year | movie_count |\n| --- | --- |\n'}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: ok, over 10 years
+Assistant response: None
+Calling query_db with {'sql_query': "SELECT year, COUNT(title) as movie_count FROM movies WHERE year >= (strftime('%Y', 'now') - 10) GROUP BY year ORDER BY year"}
+Tool Call: {'tool_call_id': 'call_jOhpymM38RyaoyR6iqDhuktu', 'role': 'tool', 'name': 'query_db', 'content': '| year | movie_count |\n| --- | --- |\n| 2014 | 6 |\n| 2015 | 4 |\n| 2016 | 5 |\n| 2017 | 4 |\n| 2018 | 3 |\n'}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: plot it
+Assistant response: None
+Calling plot_chart with {'plot_type': 'line', 'x_values': ['2014', '2015', '2016', '2017', '2018'], 'y_values': [6, 4, 5, 4, 3], 'plot_title': 'Movie Trends Over the Last 10 Years', 'x_label': 'Year', 'y_label': 'Number of Movies'}
+Tool Call: {'tool_call_id': 'call_BNrfo3QxesPmNOWqROfebX6s', 'role': 'tool', 'name': 'plot_chart', 'content': Figure({
+    'data': [{'line': {'color': '#ff9900', 'width': 2},
+              'marker': {'color': '#ff9900', 'line': {'width': 1}, 'size': 8},
+              'mode': 'lines+markers',
+              'type': 'scatter',
+              'x': [2014, 2015, 2016, 2017, 2018],
+              'y': [6, 4, 5, 4, 3]}],
+    'layout': {'margin': {'b': 60, 'l': 60, 'r': 60, 't': 80},
+               'paper_bgcolor': '#f8f8f8',
+               'plot_bgcolor': '#f8f8f8',
+               'template': '...',
+               'title': {'font': {'color': '#333', 'family': 'Arial', 'size': 20},
+                         'text': 'Movie Trends Over the Last 10 Years Line Chart'},
+               'xaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'Year'}},
+               'yaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'Number of Movies'}}}
+})}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Translation file for en-GB not found. Using default translation en-US.
