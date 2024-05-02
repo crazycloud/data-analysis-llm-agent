@@ -4,7 +4,7 @@
 
 The chatbot is designed to provide data analysis insights from database based on a predefined schema. It is built using Chainlit and OpenAI's GPT-3.5-turbo-1106 model. The chatbot utilizes OpenAI function calling to decide when to use tools and in case of db error it retries.
 
-![data analysis with llm agent](assets/data analysis with llm agent demo.gif)
+![data analysis with llm agent]("assets/data analysis with llm agent demo.gif")
 
 ## How to run it
 
