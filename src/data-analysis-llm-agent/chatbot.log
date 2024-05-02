@@ -1,0 +1,857 @@
+Your app is available at http://localhost:8002
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: Which actors have appeared in the most movies?
+Assistant response: None
+Calling query_db with {'sql_query': 'SELECT name, COUNT(movie_id) AS movie_count FROM actors GROUP BY name ORDER BY movie_count DESC LIMIT 5'}
+Tool Call: {'tool_call_id': 'call_ifOJWx8ZhOFdaDf35vmMmGCj', 'role': 'tool', 'name': 'query_db', 'content': '| name | movie_count |\n| --- | --- |\n| Paul Bateman | 5 |\n| Norman Gay | 4 |\n| Noriko Honma | 4 |\n| Kevin Spacey | 4 |\n| John Rhys-Davies | 4 |\n'}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Translation file for en-GB not found. Using default translation en-US.
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: scatter plot
+Assistant response: I have listed the top 5 actors who have appeared in the most movies. Now, I will create a scatter plot to visualize the number of movies in which each actor has appeared.
+Calling plot_chart with {'plot_type': 'scatter', 'x_values': ['Paul Bateman', 'Norman Gay', 'Noriko Honma', 'Kevin Spacey', 'John Rhys-Davies'], 'y_values': [5, 4, 4, 4, 4], 'plot_title': 'Actors vs. Number of Movies', 'x_label': 'Actor Name', 'y_label': 'Number of Movies'}
+Tool Call: {'tool_call_id': 'call_euGBgaGllkPlw9Hs4iIkZ6fl', 'role': 'tool', 'name': 'plot_chart', 'content': Figure({
+    'data': [{'marker': {'color': '#df84ff', 'line': {'width': 1}, 'opacity': 0.7, 'size': 10},
+              'mode': 'markers',
+              'type': 'scatter',
+              'x': [Paul Bateman, Norman Gay, Noriko Honma, Kevin Spacey, John
+                    Rhys-Davies],
+              'y': [5, 4, 4, 4, 4]}],
+    'layout': {'margin': {'b': 60, 'l': 60, 'r': 60, 't': 80},
+               'paper_bgcolor': '#f8f8f8',
+               'plot_bgcolor': '#f8f8f8',
+               'template': '...',
+               'title': {'font': {'color': '#333', 'family': 'Arial', 'size': 20},
+                         'text': 'Actors vs. Number of Movies Scatter Chart'},
+               'xaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'Actor Name'}},
+               'yaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'Number of Movies'}}}
+})}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: scatter plot of number of movies over last 10  years
+Assistant response: None
+Calling query_db with {'sql_query': 'SELECT m.year AS movie_year, COUNT(a.id) AS movie_count FROM actors a JOIN movies m ON a.movie_id = m.id GROUP BY m.year ORDER BY m.year'}
+Tool Call: {'tool_call_id': 'call_e9xZQxpnk6XIXIIwIcCdGpxc', 'role': 'tool', 'name': 'query_db', 'content': '| movie_year | movie_count |\n| --- | --- |\n| 1921 | 40 |\n| 1924 | 6 |\n| 1925 | 101 |\n| 1926 | 27 |\n| 1927 | 27 |\n| 1928 | 13 |\n| 1931 | 64 |\n| 1934 | 26 |\n| 1936 | 22 |\n| 1939 | 236 |\n| 1940 | 112 |\n| 1941 | 167 |\n| 1942 | 43 |\n| 1944 | 11 |\n| 1946 | 49 |\n| 1948 | 30 |\n| 1949 | 19 |\n| 1950 | 54 |\n| 1952 | 113 |\n| 1953 | 52 |\n| 1954 | 150 |\n| 1955 | 22 |\n| 1957 | 152 |\n| 1958 | 52 |\n| 1959 | 134 |\n| 1960 | 44 |\n| 1961 | 76 |\n| 1962 | 57 |\n| 1963 | 86 |\n| 1964 | 19 |\n| 1965 | 24 |\n| 1966 | 80 |\n| 1967 | 23 |\n| 1968 | 78 |\n| 1969 | 21 |\n| 1971 | 61 |\n| 1972 | 51 |\n| 1973 | 67 |\n| 1974 | 103 |\n| 1975 | 165 |\n| 1976 | 121 |\n| 1977 | 147 |\n| 1978 | 49 |\n| 1979 | 79 |\n| 1980 | 219 |\n| 1981 | 78 |\n| 1982 | 170 |\n| 1983 | 232 |\n| 1984 | 254 |\n| 1985 | 107 |\n| 1986 | 126 |\n| 1987 | 124 |\n| 1988 | 135 |\n| 1989 | 82 |\n| 1990 | 119 |\n| 1991 | 95 |\n| 1992 | 59 |\n| 1993 | 273 |\n| 1994 | 315 |\n| 1995 | 406 |\n| 1996 | 100 |\n| 1997 | 272 |\n| 1998 | 242 |\n| 1999 | 202 |\n| 2000 | 259 |\n| 2001 | 374 |\n| 2002 | 425 |\n| 2003 | 257 |\n| 2004 | 210 |\n| 2005 | 199 |\n| 2006 | 222 |\n| 2007 | 207 |\n| 2008 | 243 |\n| 2009 | 217 |\n| 2010 | 228 |\n| 2011 | 299 |\n| 2012 | 359 |\n| 2013 | 396 |\n| 2014 | 379 |\n| 2015 | 213 |\n| 2016 | 354 |\n| 2017 | 187 |\n| 2018 | 119 |\n'}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Calling plot_chart with {'plot_type': 'scatter', 'x_values': ['1921', '1924', '1925', '1926', '1927', '1928', '1931', '1934', '1936', '1939'], 'y_values': [40, 6, 101, 27, 27, 13, 64, 26, 22, 236], 'plot_title': 'Number of Movies Over Last 10 Years', 'x_label': 'Year', 'y_label': 'Number of Movies'}
+Tool Call: {'tool_call_id': 'call_PoeNqpadqNCdoMXNNQyVipQk', 'role': 'tool', 'name': 'plot_chart', 'content': Figure({
+    'data': [{'marker': {'color': '#df84ff', 'line': {'width': 1}, 'opacity': 0.7, 'size': 10},
+              'mode': 'markers',
+              'type': 'scatter',
+              'x': [1921, 1924, 1925, 1926, 1927, 1928, 1931, 1934, 1936, 1939],
+              'y': [40, 6, 101, 27, 27, 13, 64, 26, 22, 236]}],
+    'layout': {'margin': {'b': 60, 'l': 60, 'r': 60, 't': 80},
+               'paper_bgcolor': '#f8f8f8',
+               'plot_bgcolor': '#f8f8f8',
+               'template': '...',
+               'title': {'font': {'color': '#333', 'family': 'Arial', 'size': 20},
+                         'text': 'Number of Movies Over Last 10 Years Scatter Chart'},
+               'xaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'Year'}},
+               'yaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'Number of Movies'}}}
+})}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Your app is available at http://localhost:8002
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+1 change detected
+File modified: chainlit.md. Reloading app...
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+File modified: chainlit.md. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+1 change detected
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+File deleted: app1.py. Reloading app...
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+User message
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.

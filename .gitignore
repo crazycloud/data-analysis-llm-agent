@@ -1,0 +1,13 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore environment-specific settings files
+.env
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore chainlit configuration folder
+.chainlit/

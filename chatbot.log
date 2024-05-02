@@ -1,0 +1,76 @@
+Created default chainlit markdown file at /Users/stitch/Documents/code-23/data analysis agent/chainlit.md
+Your app is available at http://localhost:8000
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Your app is available at http://localhost:8000
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Your app is available at http://localhost:8000
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: top 10 movies
+Assistant response: None
+Calling query_db with {'sql_query': 'SELECT title, director, year, rating, genres FROM movies LIMIT 10'}
+Tool Call: {'tool_call_id': 'call_IEC6mGcIJXShLYSmqCHyNWPo', 'role': 'tool', 'name': 'query_db', 'content': '| title | director | year | rating | genres |\n| --- | --- | --- | --- | --- |\n| 12 Angry Men | Sidney Lumet | 1957 | APPROVED | Crime, Drama |\n| 12 Years a Slave | Steve McQueen | 2013 | R | Biography, Drama, History |\n| 2001: A Space Odyssey | Stanley Kubrick | 1968 | G | Adventure, Sci-Fi |\n| 3 Idiots | Rajkumar Hirani | 2009 | PG-13 | Comedy, Drama |\n| 8½ | Federico Fellini | 1963 | NOT RATED | Drama |\n| A Beautiful Mind | Ron Howard | 2001 | PG-13 | Biography, Drama |\n| A Clockwork Orange | Stanley Kubrick | 1971 | R | Crime, Drama, Sci-Fi |\n| A Separation | Asghar Farhadi | 2011 | PG-13 | Drama, Mystery |\n| A Wednesday | Neeraj Pandey | 2008 | NOT RATED | Crime, Drama, Mystery |\n| Alien | Ridley Scott | 1979 | R | Horror, Sci-Fi |\n'}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: how are these top 10 ?
+Assistant response: The top 10 movies are based on the initial 10 movies in the database. If you have specific criteria or ratings in mind for what defines the "top" movies, please let me know and I can retrieve movies based on those criteria.
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: when I say top 10 I mean best reviewed
+Assistant response: None
+Calling query_db with {'sql_query': 'SELECT title, director, year, rating, genres, imdb_score, imdb_votes FROM movies ORDER BY imdb_score DESC, imdb_votes DESC LIMIT 10'}
+Tool Call: {'tool_call_id': 'call_xh1zEhwga5nvbSypNmwDcrmT', 'role': 'tool', 'name': 'query_db', 'content': "| title | director | year | rating | genres | imdb_score | imdb_votes |\n| --- | --- | --- | --- | --- | --- | --- |\n| The Shawshank Redemption | Frank Darabont | 1994 | R | Drama | 9.3 | 1967060 |\n| The Godfather | Francis Ford Coppola | 1972 | R | Crime, Drama | 9.2 | 1353121 |\n| The Dark Knight | Christopher Nolan | 2008 | PG-13 | Action, Crime, Drama | 9 | 1937798 |\n| The Godfather: Part II | Francis Ford Coppola | 1974 | R | Crime, Drama | 9 | 931660 |\n| Pulp Fiction | Quentin Tarantino | 1994 | R | Crime, Drama | 8.9 | 1537588 |\n| The Lord of the Rings: The Return of the King | Peter Jackson | 2003 | PG-13 | Adventure, Drama, Fantasy | 8.9 | 1408815 |\n| Schindler's List | Steven Spielberg | 1993 | R | Biography, Drama, History | 8.9 | 1016413 |\n| The Good, the Bad and the Ugly | Sergio Leone | 1966 | R | Western | 8.9 | 586129 |\n| 12 Angry Men | Sidney Lumet | 1957 | APPROVED | Crime, Drama | 8.9 | 551194 |\n| Inception | Christopher Nolan | 2010 | PG-13 | Action, Adventure, Sci-Fi | 8.8 | 1721888 |\n"}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Your app is available at http://localhost:8000
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: top 10 movies
+Assistant response: None
+Calling query_db with {'sql_query': 'SELECT title, director, year, rating, genres, runtime FROM movies LIMIT 10'}
+Tool Call: {'tool_call_id': 'call_wUsmhAlOM5NzfBWsUPvFrp2A', 'role': 'tool', 'name': 'query_db', 'content': '| title | director | year | rating | genres | runtime |\n| --- | --- | --- | --- | --- | --- |\n| 12 Angry Men | Sidney Lumet | 1957 | APPROVED | Crime, Drama | 96 |\n| 12 Years a Slave | Steve McQueen | 2013 | R | Biography, Drama, History | 134 |\n| 2001: A Space Odyssey | Stanley Kubrick | 1968 | G | Adventure, Sci-Fi | 149 |\n| 3 Idiots | Rajkumar Hirani | 2009 | PG-13 | Comedy, Drama | 170 |\n| 8½ | Federico Fellini | 1963 | NOT RATED | Drama | 138 |\n| A Beautiful Mind | Ron Howard | 2001 | PG-13 | Biography, Drama | 135 |\n| A Clockwork Orange | Stanley Kubrick | 1971 | R | Crime, Drama, Sci-Fi | 136 |\n| A Separation | Asghar Farhadi | 2011 | PG-13 | Drama, Mystery | 123 |\n| A Wednesday | Neeraj Pandey | 2008 | NOT RATED | Crime, Drama, Mystery | 104 |\n| Alien | Ridley Scott | 1979 | R | Horror, Sci-Fi | 116 |\n'}
+Translation file for en-GB not found. Using default translation en-US.
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Translation file for en-GB not found. Using default translation en-US.
+Your app is available at http://localhost:8002
+Translation file for en-GB not found. Using default translation en-US.
+Translation file for en-GB not found. Using default translation en-US.
+Translated markdown file for en-GB not found. Defaulting to chainlit.md.
+Translated markdown file for en-US not found. Defaulting to chainlit.md.
+Translation file for en-GB not found. Using default translation en-US.
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+User message: scatter plot of number of movies over last 10  years
+Assistant response: None
+Calling query_db with {'sql_query': 'SELECT year as year, COUNT(id) as num_movies FROM movies GROUP BY year ORDER BY year DESC LIMIT 10'}
+Tool Call: {'tool_call_id': 'call_i7HI6vtspd19ODB4EDthpnKL', 'role': 'tool', 'name': 'query_db', 'content': '| year | num_movies |\n| --- | --- |\n| 2018 | 3 |\n| 2017 | 4 |\n| 2016 | 5 |\n| 2015 | 4 |\n| 2014 | 6 |\n| 2013 | 4 |\n| 2012 | 4 |\n| 2011 | 5 |\n| 2010 | 5 |\n| 2009 | 6 |\n'}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+Calling plot_chart with {'plot_type': 'scatter', 'x_values': ['2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009'], 'y_values': [3, 4, 5, 4, 6, 4, 4, 5, 5, 6], 'plot_title': 'Number of Movies Over Last 10 Years', 'x_label': 'Year', 'y_label': 'Number of Movies'}
+Tool Call: {'tool_call_id': 'call_7T0jc70vdUxFOp8hdBg1lu8r', 'role': 'tool', 'name': 'plot_chart', 'content': Figure({
+    'data': [{'marker': {'color': '#df84ff', 'line': {'width': 1}, 'opacity': 0.7, 'size': 10},
+              'mode': 'markers',
+              'type': 'scatter',
+              'x': [2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009],
+              'y': [3, 4, 5, 4, 6, 4, 4, 5, 5, 6]}],
+    'layout': {'margin': {'b': 60, 'l': 60, 'r': 60, 't': 80},
+               'paper_bgcolor': '#f8f8f8',
+               'plot_bgcolor': '#f8f8f8',
+               'template': '...',
+               'title': {'font': {'color': '#333', 'family': 'Arial', 'size': 20},
+                         'text': 'Number of Movies Over Last 10 Years Scatter Chart'},
+               'xaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'Year'}},
+               'yaxis': {'gridcolor': '#f0f0f0',
+                         'tickfont': {'size': 14},
+                         'title': {'font': {'size': 18}, 'text': 'Number of Movies'}}}
+})}
+HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
