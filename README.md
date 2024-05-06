@@ -22,11 +22,11 @@ Plot Chart: Generate visualizations to help users understand data insights.
 
 ## Code
 
-**app.py**: The main application file, which sets up the Chainlit framework and defines the chatbot's logic.
-**bot.py**: The chatbot class which handles conversation history, talking to llm and parallel function calling.
-**utils.py**: Utility functions for db introspection and format conversion
-**tools.py**: Tool functions for executing database queries and plotting charts.
-**.env**: openai api key
+**app.py**: The main application file, which sets up the Chainlit framework and defines the chatbot's logic.  
+**bot.py**: The chatbot class which handles conversation history, talking to llm and parallel function calling.  
+**utils.py**: Utility functions for db introspection and format conversion.  
+**tools.py**: Tool functions for executing database queries and plotting charts.  
+**.env**: openai api key  
 
 ## Data
 
