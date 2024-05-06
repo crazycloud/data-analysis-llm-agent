@@ -1,4 +1,4 @@
-# Conversation AI with Function Calling
+# Conversational AI with Function Calling
 
 ## Overview
 
