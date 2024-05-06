@@ -1,4 +1,4 @@
-# Conversation AI with Function Calling for Data Analysis
+# Conversational AI with Function Calling for Data Analysis
 
 ## Overview
 
